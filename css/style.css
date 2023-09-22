@@ -1,0 +1,1595 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800&display=swap');
+
+#bar { 
+    position:absolute;
+	top: 0%;
+    height: 5px;
+	width: 0;
+    color: red;
+	background-color: red;
+	z-index: 10000;
+
+     }
+
+
+
+
+
+
+body {
+	margin-right: auto;
+	margin-left: auto;
+	--farebny: #daa520;
+	--ciernobiely: #242424;
+	--stisena: #ccc;
+	--velmitmava: #151515;
+	--farba_font: #fff;
+	background-color: var(--ciernobiely);
+	color: var(--farba_font);
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-weight: 400;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: 600;
+}
+button, [type="submit"] {
+	cursor: pointer;
+}
+.kontajner {
+    max-width: 66.84rem;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 1rem;
+}
+.nadpis_sekcie {
+	text-transform: uppercase;
+	margin-bottom: 2.4rem;
+}
+.nadpis_sekcie h2 span {
+	color: var(--farebny);
+}
+.nadpis_sekcie h2 {
+	font-weight: 800;
+	padding-top: 4rem;
+	margin-bottom: 1rem;
+	margin-top: 0;
+}
+.nadpis_sekcie h3 {
+	font-weight: 400;
+	font-size: 1.3rem;
+	margin-top: 1em;
+    margin-bottom: 1em;
+}
+.oddelovac span {
+	width: 25%;
+	border-bottom: solid var(--stisena) 0.1rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+.oddelovac i {
+	margin: 0 1.1rem;
+	color: var(--stisena);
+}
+
+h1, h2, h3, h4, h5, h6 { margin: .6em 0 }  
+h1, h2, h3, h4, h5, h6 { line-height: 1.1; } /* 1.1 x velkost fontu na elemente */
+h1 { font-size: 3.1rem; }  
+h2 { font-size: 2.7rem; }  
+h3 { font-size: 2.3rem; }  
+h4 { font-size: 1.8rem; }  
+h5 { font-size: 1.4rem; }  
+h6 { font-size: 1rem; } /* 16px */ 
+
+p {  
+	margin: 1.5rem 0; 
+	font-size: 1rem; 
+}
+
+h1 {
+	font-weight: 800;
+	text-transform: uppercase;
+	margin-top: 0;
+	padding-top: 0.6em;
+}
+
+.gombik {
+	background-color: var(--farebny);
+	text-decoration: none;
+	display: inline-block;
+	padding: 1em 1.6em;
+	border-radius: 3em;
+	font-weight: 600;
+	color: var(--farba_font);
+}
+.gombik span {
+	transform: translateX(0.5rem);
+    display: inline-block;
+    transition: all 0.3s linear;
+}
+.gombik i {
+	transform: translateX(-0.5rem);
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.gombik:hover span, .gombik:hover i, .gombik:focus span, .gombik:focus i {
+	transform: translateX(0);
+}
+.gombik:hover i, .gombik:focus i {
+	opacity: 1;
+}
+.gombik2 {
+	background-color: unset;
+	border: var(--farebny) 0.15em solid;
+}
+.gombik2:hover, .gombik2:focus {
+	background-color: var(--farebny);
+	outline: none;
+}
+
+.ativovane {
+	background-color: var(--farebny);
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.trojuholnik1::before, .trojuholnik1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 100vw solid rgba(0, 0, 0, 0);
+}
+.trojuholnik1::before {
+	border-bottom: 6.8vw solid var(--farebny);
+}
+.trojuholnik1::after {
+	border-bottom: 4.8vw solid var(--ciernobiely);
+}
+.trojuholnik1, .trojuholnik2 {
+	position: relative;
+	z-index: 2;
+}
+
+.trojuholnik2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-right: 100vw solid rgba(0, 0, 0, 0);
+    border-top: 4.8vw solid var(--ciernobiely);
+    transform: translateY(100%);
+}
+.trojuholnik2 { padding-top: 3rem; }
+
+main { overflow: hidden;}
+
+.poz_sekcia {
+	background-position: center;
+    background-size: cover;
+    padding: 8rem 0 11rem;
+    color: #fff;
+    position: relative;
+}
+
+.aktivne {
+    color: var(--farebny)!important;
+}
+
+
+
+/* navigacne menu + logo ... */
+header li a {
+	text-transform: uppercase;
+	font-weight: 600;
+    font-size: 0.9rem;
+}
+header li a:hover, header li a:focus {
+	color: var(--farebny);
+}
+header li {
+	display: inline-block;
+	padding-right: 1rem;
+}
+#logo img {
+	width: 10rem;
+	height: auto;
+	display: inline-block;
+}
+#logo {
+	display: inline-block;
+	font-size: 0;
+	float: left;
+	margin-left: 1rem;
+}
+header nav {
+	float: right;
+	margin-top: 1.5rem;
+}
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+
+#header_pozadie {
+	background-color: var(--ciernobiely);
+	border-bottom: var(--stisena) 0.05rem solid;
+	background-image: none;
+}
+#header_pozadie a {
+	color: var(--farba_font);
+}
+header svg {
+	width: 10rem;
+    height: auto;
+}
+
+.otvorene_menu{}
+
+.mobil_menu span {
+	height: 0.15rem;
+	width: 2.2rem;
+	background-color: #fff;
+	display: block;
+	margin-top: 0.5rem;
+	transition: all 0.3s linear;
+}
+.mobil_menu {
+	position: absolute;
+	top: 0.5rem;
+    right: 0.8rem;
+    display: none;
+}
+.otvorene_menu span:nth-child(1) {
+	transform: rotate(45deg);
+	transform-origin: 0 0;
+}
+.otvorene_menu span:nth-child(2) {
+	width: 0;
+}
+.otvorene_menu span:nth-child(3) {
+	transform: rotate(-45deg) translate(-0.1rem, 0.1rem);
+	transform-origin: 0 100%;
+}
+
+
+
+/* Slider ... */
+#hlslider {
+	height: 100vh;
+}
+#hlslider:hover .sipka {
+	opacity: 1;
+}
+.slide {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 6;
+}
+.slide .popis {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	transform: translateY(-50%);
+	z-index: 5;
+}
+.popis h2 {
+	font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    overflow: hidden;
+}
+.popis p {
+	margin: 2.5rem 0;
+}
+.slide .pozadie {
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.overlay::before {
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.slide.overlay::before {
+	z-index: 4;
+}
+.sipka {
+	width: 4rem;
+	height: 4rem;
+	line-height: 4rem;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: block;
+	color: #fff;
+	position: absolute;
+	border-radius: 50%;
+	top: 50%;
+	left: 5%;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: all 0.3s linear;
+	z-index: 7;
+}
+.sipka:nth-of-type(2) {
+	right: 5%;
+	left: unset;
+}
+.sipka:hover, .sipka:focus {
+	background-color: var(--farebny);
+}
+
+
+.slider_ikonky { 
+	position: fixed;  
+	font-size: 3rem; 
+	top: 50%; 
+	left: 50%; 
+	transform: translate(-50%, -50%); 
+	z-index: 10; 
+	display: none;
+	color: #fff;
+}
+
+
+#hlslider .popis h2 span:not(.medzera) {
+	display: inline-block;
+}
+
+.zoom h2 span:not(.medzera) {
+	transform: translate(0)!important;
+}
+
+
+
+/* o nasej prirode ... */
+#onas_obsah {
+	display: flex;
+}
+#onas_vlavo, #onas_vpravo {
+	width: 50%;
+}
+#onas_vlavo h4 {
+	text-transform: uppercase;
+	margin-top: 0;
+}
+#onas_vlavo {
+	text-align: left;
+	padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.taby nav {
+	display: flex;
+	justify-content: space-between;
+}
+.tab_texty {
+	position: relative;
+}
+.tab_texty p {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 1.5rem 0;
+	margin: 0;
+}
+
+#onas_vpravo {
+	padding: 2rem 2rem 0;
+}
+.img_ramcek {
+	position: relative;
+}
+.img_ramcek img {
+	position: relative;
+	border-radius: 0.4rem;
+}
+.img_ramcek::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: 0.125rem solid var(--farebny);
+    border-radius: 0.4rem;
+    top: -1.7rem;
+    left: 1.4rem;
+}
+
+
+
+/* chodníky ... */
+#chodniky_vlavo img {
+	max-width: 28rem;
+	border-radius: 50%;
+	border: var(--farebny) solid 0.5rem;
+}
+#chodniky {
+	background-image: url("https://webstranky.org/img/pozadie/hory.jpg");
+}
+#chodniky .kontajner {
+	display: flex;
+}
+#chodniky_vpravo, #chodniky_vlavo {
+    width: 50%;
+}
+#chodniky_vlavo {
+	text-align: left;
+}
+#chodniky_vpravo {
+	text-align: left;
+}
+#chodniky_vpravo h3 {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+#chodniky_vpravo h4 {
+	text-transform: uppercase;
+}
+#chodniky_vpravo blockquote {
+	padding-left: 1.2em;
+	border-left: solid var(--farebny) 0.3em;
+	margin-bottom: 1.5rem;
+}
+
+.socialne_ikonky a {
+	display: inline-block;
+	width: 2.1em;
+	height: 2.1em;
+	line-height: 2.1em;
+	border-radius: 50%;
+	border: solid 0.1em var(--farebny);
+	color: var(--farebny);
+	font-size: 1.8rem;
+	text-align: center;
+	margin-right: 0.2em;
+	transition: all 0.4s;
+}
+.socialne_ikonky a:last-child {
+	margin-right: 0;
+}
+.socialne_ikonky {
+	text-align: center;
+}
+.socialne_ikonky a:hover, .socialne_ikonky a:focus {
+	background-color: var(--farebny);
+}
+.socialne_ikonky a:hover i, .socialne_ikonky a:focus i {
+	color: #fff;
+	transform: rotateY(180deg);
+}
+.socialne_ikonky a i {
+	transition: all 0.4s;
+}
+
+
+
+
+
+/* nase sluzby ... */
+#recenzie {
+	background-image: url("https://webstranky.org/img/pozadie/hviezdy.jpg")
+}
+.karty {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 1.6rem;
+}
+.karta {
+	background-color: var(--velmitmava);
+	position: relative;
+	transition: 0.5s all;
+	transform-style: preserve-3d;
+}
+.zadna_strana {
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	padding: 2.1rem;
+	text-align: left;
+}
+.zadna_strana h6 {
+	font-weight: 500;
+}
+.predna_strana {
+	height: 14rem;
+    color: var(--farebny);
+    text-align: center;
+    font-weight: 800;
+    backface-visibility: hidden;
+}
+.predna_strana i {
+	font-size: 3.3rem;
+	margin-top: 3rem;
+}
+.obal_karty:hover .karta {
+	transform: rotateY(-180deg);
+}
+
+
+
+
+/* recenzie */
+.recenzia img {
+    width: 8rem;
+    border-radius: 50%;
+}
+.recenzia q {
+	display: block;
+	margin: 1rem auto 0;
+}
+
+.gulicky .aktivne {
+	background-color: var(--farebny);
+}
+.gulicky a {
+	width: 1rem;
+	height: 1rem;
+	background-color: #fff;
+	display: inline-block;
+	border-radius: 50%;
+}
+.gulicky a:not(:last-child) {
+	margin-right: 0.7rem;
+}
+.gulicky {
+	margin-top: 2rem;
+}
+
+
+
+
+/* galeria */
+#galeria nav i {
+	opacity: 1;
+	transform: none;
+}
+.miesta {
+	display: grid;
+	grid-template-columns: 31.5% 31.5% 31.5%;
+	grid-column-gap: 2.75%;
+	margin-top: 2.5rem;
+	text-align: left;
+}
+.miesto h5 {
+	text-transform: uppercase;
+	font-size: 1rem;
+	margin: 0.9rem 0 0;
+	border-left: solid var(--farebny) 0.15rem;
+	text-indent: 0.9rem;
+	font-weight: 600;
+}
+.miesto p {
+	margin-top: 1rem;
+	color: var(--stisena);
+}
+.miesto p a {
+	color: var(--farba_font);
+}
+.titulka {
+	position: relative;
+	display: block;
+	border-radius: 0.4rem;
+	overflow: hidden;
+}
+.titulka:hover .lupa {
+	opacity: 1;
+}
+.lupa {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	opacity: 0;
+	transition: all 0.3s;
+}
+.lupa i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+}
+
+
+
+
+/* fakty */
+#fakty {
+	background-image: url("https://webstranky.org/img/pozadie/jazero.jpg")
+}
+#fakty_grid {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
+#fakty_grid p:nth-child(1) {
+	font-size: 5.1rem;
+}
+#fakty_grid p:nth-child(2) {
+	color: var(--farebny);
+	font-size: 3.2rem;
+    font-weight: 800;
+}
+#fakty_grid p:nth-child(3) {
+	font-weight: 800;
+	font-size: 1.1rem;
+}
+
+
+
+
+/* nas tim */
+.clenovia {
+    display: grid;
+    grid-template-columns: 22.937% 22.937% 22.937% 22.937%;
+    grid-column-gap: 2.75%;
+}
+.fotka {
+    position: relative;
+}
+.clen_popis {
+    background-color: var(--velmitmava);
+    text-align: center;
+    border-top: solid 0.2rem var(--farebny);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    transition: all 0.3s;
+}
+.fotka img {
+    display: block;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.clen_kontakt {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.clen_kontakt div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.clen_kontakt a {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 0.15rem solid #fff;
+    line-height: 2.5rem;
+    text-align: center;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+.clen_kontakt i {
+    transition: all 0.3s;
+}
+.clen_popis h4 {
+    margin-top: 0;
+    padding-top: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.clen_popis p {
+    padding-bottom: 1.5rem;
+    font-style: italic;
+    margin-top: 0;
+}
+.clen:hover .clen_popis {
+    background-color: var(--farebny);
+    color: #fff;
+}
+.clen:hover .clen_kontakt {
+    opacity: 1;
+}
+
+
+
+
+
+/* odoberat */
+#odoberat {
+	background-image: url("https://webstranky.org/img/pozadie/hory.jpg")
+}
+#odoberat .kontajner {
+	max-width: 33rem;
+}
+#odoberat button {
+	font-size: 1rem;
+}
+
+#odoberat form input {
+	width: 100%;
+}
+#odoberat form div {
+	padding-left: 3rem;
+	margin-bottom: 2rem;
+}
+
+
+
+
+/* blog */
+.clanky {
+	display: grid;
+	grid-template-columns: 31.5% 31.5% 31.5%;
+    grid-column-gap: 2.75%;
+}
+.clanky article {
+	position: relative;
+}
+.clanky time {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	border-radius: 0.2rem;
+	padding: 0.3rem;
+	color: #fff;
+	background-color: var(--farebny);
+	text-transform: uppercase;
+	line-height: 1.3;
+	z-index: 2;
+}
+.clanky img {
+	transition: 0.3s all;
+}
+.clanky img:hover {
+	transform: scale(1.1);
+}
+.clanky h5 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-align: left;
+}
+.clanky p {
+	margin-top: 1rem;
+	text-align: left;
+}
+.clanky a {
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 0.4rem;
+	color: var(--farba_font);
+}
+
+
+
+
+/* video_promo */
+#video_promo {
+	background-image: url("https://webstranky.org/img/pozadie/hviezdy.jpg")
+}
+.video_play {
+	display: block;
+	width: 4.8rem;
+    height: 4.8rem;
+    line-height: 4.8rem;
+    border: 0.35rem solid var(--farebny);
+    margin: 2rem auto 0;
+    font-size: 1.9rem;
+    color: var(--farebny);
+    border-radius: 50%;
+}
+
+
+
+/* mapa */
+#kontakt_mapa iframe { width: 100%; }
+.infoboxy {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 1.8rem;
+}
+.infobox {
+	background-color: var(--velmitmava);
+	text-align: left;
+	position: relative;
+	padding: 1.3rem;
+	transform: translateY(-4rem);
+}
+.infobox i {
+	position: absolute;
+	top: 1.8rem;
+	right: 1.8rem;
+	color: var(--farebny);
+	font-size: 3.5rem;
+}
+.infobox div {
+    max-width: 75%;
+    border-bottom: solid 0.1rem var(--stisena);
+}
+.infobox p {
+	color: var(--stisena);
+	line-height: 1.6rem;
+}
+.infobox a {
+	color: var(--farebny);
+}
+
+
+
+/* kontakt_formular */
+#kontakt_formular {
+	background-image: url("https://webstranky.org/img/pozadie/jazero.jpg")
+}
+#kontakt_formular form {
+    max-width: 46rem;
+    margin: 0 auto;
+}
+
+#kontakt_formular form div {
+	width: 21.5rem;
+	text-align: right;
+}
+form div {
+	position: relative;
+}
+form label {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+form div input {
+	height: 3.2rem;
+    width: 18.7rem;
+    padding: 0.6rem 0.6rem 0.6rem 1.4rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: none;
+    border-top-right-radius: 1.9rem;
+    border-bottom-right-radius: 1.9rem;
+    transition: all 0.3s;
+    font-family: 'Raleway', sans-serif;
+}
+
+form div label {
+	box-sizing: border-box;
+	background-color: var(--farebny);
+	height: 3.2rem;
+	width: 3.5rem;
+	border-bottom-left-radius: 1.9rem;
+    border-top-left-radius: 1.9rem;
+    text-align: center;
+    line-height: 3.2rem;
+    transition: all 0.3s;
+}
+
+input:focus {
+	outline: none;
+	padding-left: 0.9rem;
+}
+
+input:focus + label {
+	width: 3rem;
+	font-size: 0.7rem;
+}
+
+#kontakt_formular section {
+	display: flex;
+	justify-content: space-between;
+}
+
+#kontakt_formular textarea {
+    border-radius: 1.9rem;
+    padding: 0.9rem;
+    width: 100%;
+    height: 14rem;
+    margin: 2rem 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+}
+
+#kontakt_formular button {
+	font-size: 1rem;
+	width: 21.5rem;
+}
+
+
+
+
+/* partneri */
+#partneri img {
+	height: 3.6rem;
+	width: auto;
+}
+.konkretni_partneri {
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.obal_partneri {
+	height: 3.6rem;
+	position: relative;
+	width: 150%;
+}
+#partneri .kontajner {
+	padding-top: 3rem;
+	overflow: hidden;
+}
+.konkretni_partneri:first-child {
+	animation: presun_partnera1 12s linear infinite;
+}
+
+.konkretni_partneri:last-child {
+	transform: translateX(100%);
+	animation: presun_partnera2 12s linear infinite;
+}
+
+@keyframes presun_partnera1 {
+	from {transform: translateX(0%);}
+	to {transform: translateX(-100%);}
+}
+@keyframes presun_partnera2 {
+	from {transform: translateX(100%);}
+	to {transform: translateX(0%);}
+}
+
+
+
+
+/* parallax */
+#parallax {
+	background-color: #102930;
+	height: 46rem;
+	overflow: hidden;
+	position: relative;
+}
+#parallax img, #parallax div {
+	max-width: unset;
+	position: absolute;
+}
+#para_mesiac {
+	width: 10rem;
+	top: 14%;
+    left: 5%;
+}
+#para_hora {
+	width: 90rem;
+	bottom: -14rem;
+    left: 50%;
+    margin-left: -45rem;
+}
+#para_dom {
+	width: 30rem;
+	bottom: -5rem;
+    right: 8%;
+}
+#para_tabula {
+	width: 16rem;
+	bottom: -6rem;
+    left: 8%;
+}
+
+#stromceky_druhe, #stromceky_prve {
+    background-image: url(https://webstranky.org/img/parallax/les2.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    min-width: 435px;
+}
+#stromceky_druhe {
+    height: 12rem;
+    bottom: -1.8rem;
+}
+#stromceky_prve {
+    height: 15rem;
+    bottom: -2rem;
+}
+#para_trava, #stromceky_druhe, #stromceky_prve {
+    width: 120%;
+    left: -10%;
+}
+#para_trava {
+    background-image: url(https://webstranky.org/img/parallax/trava.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    bottom: -13rem;
+    height: 20rem;
+    min-width: 1070px;
+}
+
+
+
+
+
+/* footer */
+footer .socialne_ikonky a {
+	font-size: 1.2rem;
+}
+footer {
+	padding: 6rem 0;
+	background-color: #111;
+}
+
+
+
+
+#koleso_prepinac {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    background-color: #fff;
+    color: #000;
+    padding: 0.4em 0.6em;
+    z-index: 9;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+}
+#koleso_prepinac i {
+	animation-name: rotovanie;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotovanie {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+
+
+#navrch {
+	line-height: 3.3rem; /* ikonka na stred vertikalne */
+	width: 3.3rem;
+	height: 3.3rem;
+	display: inline-block;
+	border: solid 0.15rem var(--farebny);
+	color: var(--farebny);
+	border-radius: 50%;
+	text-shadow: 0 0 0.1rem #000;
+    box-shadow: 0 0 0.1rem 0 #000;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    transition: all 0.3s;
+    z-index: 15;
+    overflow: hidden;
+}
+#navrch:hover {
+	background-color: var(--farebny);
+}
+#navrch i:last-of-type {
+	color: #fff;
+	position: absolute;
+	bottom: -1.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 0.3s;
+}
+#navrch:hover i:first-of-type {
+	transform: translateY(-2.6rem);
+}
+#navrch i:first-of-type {
+	transition: all 0.3s;
+}
+#navrch:hover i:last-of-type {
+	transform: translate(-50%, -2.6rem);
+}
+
+
+
+
+#prepinac_stylov {
+	background-color: #fff;
+	color: #000;
+	width: 13rem;
+	position: fixed;
+	left: 0;
+    top: 50%;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: left;
+    z-index: 15;
+    transform: translate(-100%, -50%);
+    transition: all 0.3s linear 0s;
+}
+#prepinac_stylov h5, #prepinac_stylov h6 {
+	text-transform: uppercase;
+}
+#prepinac_stylov h5 {
+	font-size: 1rem;
+	font-weight: 600;
+    border-bottom: solid 0.1rem #ccc;
+    margin-top: 0;
+}
+.farby a {
+	font-size: 2.1rem;
+}
+.farby, #prepinac_pozadia {
+    border-bottom: solid 0.1rem #ccc
+}
+#prepinac_fontu h6 {
+	display: inline-block;
+}
+#prepinac_stylov select {
+	font-size: 1.1rem;
+	border: 0.07rem rgb(118, 118, 118) solid;
+}
+#prepinac_pozadia {
+	padding: 0.5rem 0 0.8rem;
+}
+#prepinac_fontu {
+	padding-top: 0.7rem;
+}
+#x_prepinac {
+	position: absolute;
+	top: 0;
+	right: 0;
+	top: 0.3rem;
+    right: 0.4rem;
+    color: #000;
+    font-size: 1.4rem;
+}
+
+
+
+
+#overlay_pre_img, #overlay_video {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    display: none;
+}
+
+#overlay_pre_img img {
+    max-width: 90vw;
+    max-height: 99.9vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sipky {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 12.5rem;
+    line-height: 12.5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 3rem;
+    border-radius: 1rem;
+    user-select: none;
+}
+.sipka1 {
+    left: 0;
+}
+.sipka2 {
+    right: 0;
+}
+#overlay_pre_img p {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: #000;
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+}
+
+
+#overlay_video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+@media all and (max-width: 1200px) {
+	.infoboxy {
+	    width: 86vw;
+	}
+}
+
+@media all and (max-width: 1020px) {
+  .karty {
+    grid-template-columns: auto;
+	}
+	.karta {
+	    max-width: 36rem;
+	    height: 11rem;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.obal_karty:hover .karta, .zadna_strana {
+		transform: unset;
+	}
+	.predna_strana h5 {
+		display: none;
+	}
+	.predna_strana i {
+		position: absolute;
+		top: -3rem;
+		right: 0;
+		font-size: 11rem;
+		opacity: 0.3;
+	}
+}
+@media all and (max-width: 994px) {
+  #chodniky .kontajner {
+    flex-direction: column;
+    align-items: center;
+  }
+  #chodniky_vlavo {
+    width: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+	}
+	#chodniky_vlavo img {
+		width: 100%;
+	}
+	#chodniky_vpravo {
+		max-width: 30rem;
+		width: unset;
+	}
+	.socialne_ikonky a {
+		font-size: 1.1rem;
+	}
+
+	/* --- */
+	#onas_obsah {
+		flex-direction: column;
+		align-items: center;
+	}
+	#onas_vlavo, #onas_vpravo {
+		width: unset;
+		max-width: 30rem;
+	}
+	#onas_vlavo {
+		padding-right: 0;
+	}
+
+	#fakty_grid {
+	    grid-template-columns: auto auto;
+	}
+
+	.infoboxy {
+		grid-template-columns: auto;
+	}
+	.infobox {
+		transform: unset;
+	}
+}
+
+@media all and (max-width: 900px) {
+	header nav, #logo {
+		float: none;
+	}
+	header li {
+		display: block;
+		padding: 0.8rem 0;
+		border-top: 0.05rem var(--stisena) solid;
+	}
+	header nav {
+		background-color: var(--ciernobiely);
+		margin-top: 0;
+	}
+	header {
+		border-bottom: 0.05rem var(--stisena) solid;
+	}
+	#logo img {
+	    width: 7rem;
+	}
+
+	.mobil_menu { display: block; }
+}
+
+@media (max-width: 720px) {
+	.miesta {
+	    grid-template-columns: 48.625% 48.625%;
+	}
+	.clenovia {
+	    grid-template-columns: auto auto;
+	}
+	.clanky {
+	    grid-template-columns: auto;
+	    max-width: 30rem;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+}
+
+@media all and (max-width: 640px) {
+	.medzera {
+		display: block;
+	}
+}
+
+@media all and (max-width: 510px) {
+	.taby nav {
+		flex-direction: column;
+		border: 0.05rem solid var(--stisena);
+    	border-radius: 1rem;
+	}
+	.taby nav span {
+		display: none;
+	}
+	.taby nav a {
+		padding: 1rem 0;
+		width: 100%;
+    	text-align: center;
+	}
+	.taby nav a:not(:last-child) {
+	    border-bottom: 0.05rem solid var(--stisena);
+	}
+
+	.miesta {
+	    grid-template-columns: auto;
+	}
+
+	#fakty_grid {
+	    grid-template-columns: auto;
+	}
+
+	.clenovia {
+	    grid-template-columns: auto;
+	}
+}
+
+
+
+.error {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+
+.slide_zlava { 
+	animation: forwards slide_zlava 0.5s ease-in-out; 
+}
+@keyframes slide_zlava { 
+	from { transform: translateX(-100vw); } 
+	to { transform: translateX(0vw); } 
+} 
+
+.slide_zprava { 
+animation: forwards slide_zprava 0.5s ease-in-out; 
+}
+@keyframes slide_zprava { 
+	from { transform: translateX(100vw); } 
+	to { transform: translateX(0vw); } 
+} 
+
+.odchod_dolava { 
+	animation: forwards odchod_dolava 0.5s ease-in-out; 
+} 
+@keyframes odchod_dolava { 
+	from { transform: translateX(0vw); } 
+	to { transform: translateX(-100vw); } 
+} 
+
+.odchod_doprava { 
+	animation: forwards odchod_doprava 0.5s ease-in-out; 
+} 
+@keyframes odchod_doprava { 
+	from { transform: translateX(0vw); } 
+	to { transform: translateX(100vw); }
+}
+
+
+.recenzia {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(100vw);
+}
+
+.kolotoc {
+	position: relative;
+}
+
+.gulicky {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+/* slider: */
+.zoom .pozadie { 
+	animation: zoom 6.8s ease-in-out both; 
+}
+@keyframes zoom { 
+	from { transform: scale(1); } 
+	to { transform: scale(1.5); } 
+} 
+
+
+
+
+
+
+
+
+
+.clearfix::before, 
+.clearfix::after {
+	content: " "; 
+	display: table; 
+}
+.clearfix::after { 
+	clear: both;
+} 
+.clearfix{ 
+	zoom: 1;
+}
+
+
+
+
+
+
+/*
+
+
+https://www.w3schools.com/css/css3_animations.asp
+
+https://www.w3schools.com/tags/tag_time.asp
+
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+
+https://www.w3schools.com/tags/tag_select.asp
+
+https://www.w3schools.com/cssref/pr_class_cursor.php
+
+https://www.w3schools.com/tags/att_input_type_radio.asp
+
+https://www.w3schools.com/tags/att_input_autofocus.asp
+
+https://www.w3schools.com/css/css_combinators.asp
+
+https://www.w3schools.com/cssref/css3_pr_transform.php
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+https://www.w3schools.com/howto/howto_css_shapes.asp
+
+https://autoprefixer.github.io/
+
+https://www.w3schools.com/css/css_combinators.asp - selektory
+
+opacity, transform - vykon PC sa presuva na graficku kargtu
+
+https://www.w3schools.com/css/css3_transitions.asp
+
+https://www.w3schools.com/css/css3_gradients.asp
+
+https://codepen.io/search/pens?q=3d+css
+css tricks
+
+https://www.w3schools.com/cssref/pr_background-attachment.php
+
+https://www.w3schools.com/cssref/sel_nth-child.php
+
+ked nastavim elementu position, tak uz viem pouzivat z-index
+
+premiestnovanie elementov
+position: fixed, absolute, relative
+left, top, right, bottom
+
+https://cssgenerator.org/text-shadow-css-generator.html
+https://cssgenerator.org/box-shadow-css-generator.html
+
+https://fontawesome.com/icons
+https://coolsymbol.com/
+
+#000 #fff
+hex zapis farby - ak sa dovjice opakuju tak staci jeden znak z dvojice uviest
+
+https://www.w3schools.com/colors/colors_names.asp
+https://coolors.co/
+0to255.com/ 
+https://color.hailpixel.com/
+
+https://necolas.github.io/normalize.css/8.0.1/normalize.css
+https://meyerweb.com/eric/tools/css/reset/
+
+p * { }
+* {
+	outline: 2px solid white;
+}   - oznacim vsetky elementy
+
+outline: 2px white solid;  - vonkajsia ciara, ako border, nezabera priestor
+
+https://www.w3schools.com/css/css_attribute_selectors.asp
+
+selector: ked su rovnako silny, tak vyhrava ten posledny
+
+sila selektorov / css zapisu: 
+	Attribute selector 
+	type selector (p, h2, li, a) 
+	Class selector (trieda .) 
+	id (id_čko #) 
+	element style (css do html elementu) 
+	!important
+
+selektor {
+	deklaracia = vlastnost: hodnota;
+}
+
+width: 50% - polovica zo sirky rodica
+
+https://fonts.google.com/
+w3schools.com/cssref/css_websafe_fonts.asp
+
+font-weight: normal / bold / 100, 200, ... 900
+
+https://www.w3schools.com/css/css3_variables.asp
+
+https://caniuse.com/
+
+absolutne a relativne jednotky - https://www.w3schools.com/cssref/css_units.php
+
+1rem (root em) - 1 krat velkost fontu na html / prehliadaci
+2rem = 32px
+
+1em:
+- ked nastavujeme font 1 x velkost fontu z rodica
+- ked nastavujeme vsetko ostatne (margin, padding, ...) 1em = 1x16px ( 16px velkost fontu na danom elemente)
+
+nadpisy nededia velkost fonty
+linky nededia farbu fontu a su automaticky podciarknute
+
+ */
